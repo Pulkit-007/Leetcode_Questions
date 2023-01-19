@@ -1,0 +1,18 @@
+class Solution {
+    public int countAsterisks(String s) {
+        boolean pipe=false;
+        int ans=0;
+        for(char c:s.toCharArray())
+        {
+            if(c=='*' && !pipe)
+            {
+                ans+=1;
+            }
+            if(c=='|')
+            {
+                pipe=!pipe;
+            }
+        }
+        return ans;
+    }
+}
